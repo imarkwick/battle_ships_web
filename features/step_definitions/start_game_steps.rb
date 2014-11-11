@@ -15,8 +15,6 @@ When(/^Press the "(.*?)" button$/) do |arg1|
 	click_button(arg1)
 end
 
-# expect(current_path).to eq(post_comments_path(post))
-
 Then(/^I should be on the put place ships$/) do
   expect(page).to have_content("place ships, Izzy")
- end
+end
