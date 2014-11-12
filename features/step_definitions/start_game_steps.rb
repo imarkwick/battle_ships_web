@@ -15,6 +15,30 @@ When(/^Press the "(.*?)" button$/) do |button_name|
 	click_button(button_name)
 end
 
-Then(/^I should wait for another player to join$/) do
-	expect(page).to have_content("Waiting for player 2 to join the game")
+Then(/^I should be asked to place some ships$/) do
+	expect(page).to have_content("Please enter the coordinates and orientation of your ships")
 end
+
+Given(/^I have registered$/) do
+	visit '/'
+	step("I register to play the game")
+end
+
+Given(/^I have entered ships$/) do
+	fill_in 'ship_one', with: 'a1'
+	select('vertical', :from => 'ship_one_orientation')
+	fill_in 'ship_two', with: 'b1'
+	select('vertical', :from => 'ship_two_orientation')
+	fill_in 'ship_three', with: 'c1'
+	select('vertical', :from => 'ship_three_orientation')
+	fill_in 'ship_four', with: 'd1'
+	select('vertical', :from => 'ship_four_orientation')
+end
+
+# Then(/^I should be asked to place some ships$/) do
+
+# end
+
+
+
+

@@ -7,4 +7,11 @@ Scenario: Registering
 	Given I am on the homepage
 	When I fill out my name
 	And Press the "Submit" button
+	Then I should be asked to place some ships
+
+
+Scenario: Placing ships
+	Given I have registered
+	And I have entered ships
 	Then I should wait for another player to join
+

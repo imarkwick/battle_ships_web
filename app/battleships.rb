@@ -20,8 +20,7 @@ class BattleShips < Sinatra::Base
   	if GAME.ready?
   		redirect '/play'
   	else 
-  	
-  	erb :waiting
+  	erb :place_ships
   	end
   end
 
