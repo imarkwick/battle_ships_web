@@ -11,10 +11,10 @@ When(/^Press the submit button$/) do
   	click_button('Submit')
 end
 
-When(/^Press the "(.*?)" button$/) do |arg1|
-	click_button(arg1)
+When(/^Press the "(.*?)" button$/) do |button_name|
+	click_button(button_name)
 end
 
-Then(/^I should be on the put place ships$/) do
-  expect(page).to have_content("place ships, Izzy")
+Then(/^I should wait for another player to join$/) do
+	expect(page).to have_content("Waiting for player 2 to join the game")
 end
