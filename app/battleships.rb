@@ -3,6 +3,7 @@ require_relative '../lib/player'
 require_relative '../lib/game'
 require_relative '../lib/board'
 require_relative '../lib/cell'
+require_relative '../lib/ship'
 
 class BattleShips < Sinatra::Base
 enable :sessions
@@ -11,10 +12,6 @@ enable :sessions
 
   get '/' do
     erb :index
-  end
-
-  get '/test' do
-    erb :test
   end
 
   post '/create_player' do
@@ -28,13 +25,17 @@ enable :sessions
   	end
   end
 
-  post '/place_ship' do
-
-  	erb :place_ships
+  post '/place_ships' do
+    if GAME.ready?
+      redirect '/play'
+    else
+      p params
+      erb :place_ships
+    end
   end
 
-  get '/placing_ships' do
-  	erb :place_ships
+  get '/play' do
+    
   end
 
   # start the server if ruby file executed directly

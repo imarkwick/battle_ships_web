@@ -6,20 +6,20 @@
 <h4>Please select the coordinates and orientation for your ships</h4>
 
 Select the ship you want to place
-<form action="placing_ships">
-	<select name="Ship Type">
-		<option value="selection">Select Ship</option>
+<br>
+<form action="place_ships" method="post">
+	<select name="ship_type">
 		<option value="ship_one">Aircraft Carrier</option>
 		<option value="ship_two">Battleship</option>
 		<option value="ship_three">Destroyer</option>
 		<option value="ship_four">Submarine</option>
 		<option value="ship_five">Patrol Boat</option>
 	</select>
-</form>
-
-Horizontal coordinate
-<form action="select_horizontal_coordinate">
-	<select name="horizontal_coordinate">
+<br>
+<br>
+Vertical coordinate
+<br>
+	<select name="vertical_coordinate">
 		<option value="a">A</option>
 		<option value="b">B</option>
 		<option value="c">C</option>
@@ -31,11 +31,11 @@ Horizontal coordinate
 		<option value="i">I</option>
 		<option value="j">J</option>
 	</select>
-</form>
-
-Vertical coordinate
-<form action="select_vertical_coordinate">
-	<select name="vertical_coordinate">
+<br>
+<br>
+Horizontal coordinate
+<br>	
+	<select name="horizontal_coordinate">
 		<option value="1">1</option>
 		<option value="2">2</option>
 		<option value="3">3</option>
@@ -47,16 +47,20 @@ Vertical coordinate
 		<option value="9">9</option>
 		<option value="10">10</option>
 	</select>
-</form>
-
+<br>
+<br>
 Direction
-<form action="select_direction">
+<br>
 	<select name="direction">
 		<option value="n">North</option>
 		<option value="e">East</option>
 		<option value="s">South</option>
 		<option value="w">West</option>
 	</select>
+<br>
+<br>
+<input type= "submit" value = "place ship">
+
 </form>
 
 </center>
