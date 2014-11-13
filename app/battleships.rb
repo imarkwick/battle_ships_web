@@ -24,6 +24,11 @@ class BattleShips < Sinatra::Base
   	end
   end
 
+  get '/placing_ships' do
+
+  	erb :place_ships
+  end
+
   # start the server if ruby file executed directly
   run! if app_file == $0
 end

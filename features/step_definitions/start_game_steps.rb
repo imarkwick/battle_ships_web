@@ -7,25 +7,26 @@ When(/^I fill out my name$/) do
 	fill_in('player_name', :with => 'Izzy')
 end
 
-When(/^Press the submit button$/) do
-  	click_button('Submit')
-end
+# When(/^Press the submit button$/) do
+#   	click_button('Submit')
+# end
 
 When(/^Press the "(.*?)" button$/) do |button_name|
 	click_button(button_name)
 end
 
 Then(/^I should be asked to place some ships$/) do
-	expect(page).to have_content("Please enter the coordinates and orientation of your ships")
+	expect(page).to have_content("Please select the coordinates and orientation for each of your ships")
 end
 
 Given(/^I have registered$/) do
 	visit '/'
-	step("I register to play the game")
+	step("I fill out my name")
+	click_button('Submit')
 end
 
-Given(/^I have entered ships$/) do
-	fill_in 'ship_one', with: 'a1'
+Given(/^I have entered ship coordinates$/) do
+	fill_in 'aircraft_carrier', with: 'a1'
 	select('vertical', :from => 'ship_one_orientation')
 	fill_in 'ship_two', with: 'b1'
 	select('vertical', :from => 'ship_two_orientation')
@@ -35,9 +36,14 @@ Given(/^I have entered ships$/) do
 	select('vertical', :from => 'ship_four_orientation')
 end
 
-# Then(/^I should be asked to place some ships$/) do
+Given(/^I have clicked the "(.*?)" button$/) do |arg1|
+  pending # express the regexp above with the code you wish you had
+end
 
-# end
+Then(/^I should wait for another player to join$/) do
+  pending # express the regexp above with the code you wish you had
+end
+
 
 
 

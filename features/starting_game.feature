@@ -12,6 +12,7 @@ Scenario: Registering
 
 Scenario: Placing ships
 	Given I have registered
-	And I have entered ships
+	And I have entered ship coordinates
+	And I have clicked the "Place Ships" button
 	Then I should wait for another player to join
 

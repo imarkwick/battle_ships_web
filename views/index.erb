@@ -1,5 +1,9 @@
 <h1>Welcome to Battleship<h1>
 
+<% if @name %>
+	<h3>Welcome, <%= @name %></h3>
+<% end %>
+
 <form action="/create_player" method="post">
 First name:
 <input type="text" name="player_name">

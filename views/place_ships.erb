@@ -1,1 +1,15 @@
-Please enter the coordinates and orientation of your ships
+<% if @name %>
+	<h3>Welcome, <%= @name %></h3>
+<% end %>
+
+<h4>Please select the coordinates and orientation for each of your ships</h4>
+
+<form action="placing_ships">
+	<select name="Ship Type">
+		<option value="aircraft_carrier">Aircraft Carrier</option>
+		<option value="battleship">Battleship</option>
+		<option value="destroyer">Destroyer</option>
+		<option value="submarine">Submarine</option>
+		<option value="patrol_boat">Patrol Boat</option>
+	</select>
+</form>
