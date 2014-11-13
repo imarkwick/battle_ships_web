@@ -1,12 +1,14 @@
-
+<html>
+<center>
 <h3>Welcome, <%= @player_name %></h3>
 
 
-<h4>Please select the coordinates and orientation for each of your ships</h4>
+<h4>Please select the coordinates and orientation for your ships</h4>
 
 Select the ship you want to place
 <form action="placing_ships">
 	<select name="Ship Type">
+		<option value="selection">Select Ship</option>
 		<option value="ship_one">Aircraft Carrier</option>
 		<option value="ship_two">Battleship</option>
 		<option value="ship_three">Destroyer</option>
@@ -56,3 +58,6 @@ Direction
 		<option value="w">West</option>
 	</select>
 </form>
+
+</center>
+</html>

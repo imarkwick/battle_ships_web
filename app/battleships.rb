@@ -13,6 +13,10 @@ enable :sessions
     erb :index
   end
 
+  get '/test' do
+    erb :test
+  end
+
   post '/create_player' do
   	player = Player.new
   	@player_name = params[:player_name]
@@ -26,6 +30,10 @@ enable :sessions
 
   post '/place_ship' do
 
+  	erb :place_ships
+  end
+
+  get '/placing_ships' do
   	erb :place_ships
   end
 
