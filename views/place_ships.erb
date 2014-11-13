@@ -1,15 +1,58 @@
 
-	<h3>Welcome, <%= @player_name %></h3>
+<h3>Welcome, <%= @player_name %></h3>
 
 
 <h4>Please select the coordinates and orientation for each of your ships</h4>
 
+Select the ship you want to place
 <form action="placing_ships">
 	<select name="Ship Type">
-		<option value="aircraft_carrier">Aircraft Carrier</option>
-		<option value="battleship">Battleship</option>
-		<option value="destroyer">Destroyer</option>
-		<option value="submarine">Submarine</option>
-		<option value="patrol_boat">Patrol Boat</option>
+		<option value="ship_one">Aircraft Carrier</option>
+		<option value="ship_two">Battleship</option>
+		<option value="ship_three">Destroyer</option>
+		<option value="ship_four">Submarine</option>
+		<option value="ship_five">Patrol Boat</option>
+	</select>
+</form>
+
+Horizontal coordinate
+<form action="select_horizontal_coordinate">
+	<select name="horizontal_coordinate">
+		<option value="a">A</option>
+		<option value="b">B</option>
+		<option value="c">C</option>
+		<option value="d">D</option>
+		<option value="e">E</option>
+		<option value="f">F</option>
+		<option value="g">G</option>
+		<option value="h">H</option>
+		<option value="i">I</option>
+		<option value="j">J</option>
+	</select>
+</form>
+
+Vertical coordinate
+<form action="select_vertical_coordinate">
+	<select name="vertical_coordinate">
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">5</option>
+		<option value="6">6</option>
+		<option value="7">7</option>
+		<option value="8">8</option>
+		<option value="9">9</option>
+		<option value="10">10</option>
+	</select>
+</form>
+
+Direction
+<form action="select_direction">
+	<select name="direction">
+		<option value="n">North</option>
+		<option value="e">East</option>
+		<option value="s">South</option>
+		<option value="w">West</option>
 	</select>
 </form>
