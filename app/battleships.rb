@@ -34,6 +34,8 @@ enable :sessions
     end
   end
 
+  # repeat place ships page with form, 5 times until all ships are on the board
+
   get '/play' do
     
   end

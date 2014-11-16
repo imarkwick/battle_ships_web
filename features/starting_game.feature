@@ -14,5 +14,12 @@ Scenario: Placing ships
 	Given I have registered
 	When I have entered ship coordinates
 	And I have clicked the "place ship" button
-	Then I should be asked to play another ship
+	Then I should be asked to place another ship
+
+
+Scenario: Starting game
+	Given I have placed all my ships
+	And I can see my board with ships on it
+	And Player 2 has also placed all of their ships
+	Then I should be on the play battle ships page
 
