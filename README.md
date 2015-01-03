@@ -8,3 +8,15 @@ An introduction to:
 * capybara
 * html
 * css
+
+To view the tests, run;
+
+```sh
+$ rspec
+```
+
+To open in the browser, start the server and visit localhost/9292;
+
+```sh
+$ rackup
+```
